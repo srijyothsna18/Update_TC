@@ -28,31 +28,28 @@ class Update:
 
     def update_tc(self):
         testcase_id = input("Enter the test case ID you want to update: ").strip()
-        #new_summary = input("Enter the new summary for the test case: ").strip()
 
         try:
-            # Update only the summary field
             response = self.tlc.updateTestCase(
                 testcase_id,
-                version=1,  # Optional, leave empty if not needed
+                version=1, 
                 testcasename="Device_testing",  # Must be provided compulsory
                 summary="testing a device",
-                preconditions=None,  # Optional, leave empty if not needed
-                steps=None,  # Optional, leave empty if not needed
-                importance=None,  # Optional, leave empty if not needed
-                executiontype=None,  # Optional, leave empty if not needed
-                status=None,  # Optional, leave empty if not needed
-                estimatedexecduration=None  # Optional, leave empty if not needed
+                preconditions=None,  
+                steps=None,  
+                importance=None,  
+                executiontype=None, 
+                status=None,  
+                estimatedexecduration=None  
             )
             print(f"Test case {testcase_id} updated successfully!")
-            print("API Response:", response)  # Add this line to check the raw response
+            print("API Response:", response)  
         except TLResponseError as e:
             print(f"Error occurred: {e}")
         except Exception as e:
             print(f"Unexpected error: {e}")
 
 
-# Initialize and run the update
 u = Update()
 print("TestCaseID TestCase_ExternalID TestCaseName\n")
 u.func()

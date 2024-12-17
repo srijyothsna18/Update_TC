@@ -6,7 +6,7 @@ updateTestCase(['testcaseexternalid'],
     ['version', 'testcasename', 'summary', 'preconditions', 'steps',
      'importance', 'executiontype', 'status', 'estimatedexecduration',
      'user'])
-
+```
 You will get the status as **ok** in the API_response if test case updated successfully
 
 ```bash
@@ -21,3 +21,4 @@ TestCaseID TestCase_ExternalID TestCaseName
 Enter the test case ID you want to update: pcie-1
 Test case pcie-1 updated successfully!
 API Response: {'status_ok': True, 'msg': 'ok', 'operation': 'updateTestCase'}
+```

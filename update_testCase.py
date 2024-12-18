@@ -48,9 +48,24 @@ class Update:
             print(f"Error occurred: {e}")
         except Exception as e:
             print(f"Unexpected error: {e}")
+       
+    def add_keywords_to_updated_tc(self):
+        if not self.testcase_id:
+            print("Test case ID is not set. Update the test case first!")
+            return
+
+        try:
+            response_keyw = self.tlc.addTestCaseKeywords({self.testcase_id: ["smoke", "regression"]})
+            print(f"Keywords added to test case {self.testcase_id}:", response_keyw)
+        except TLResponseError as e:
+            print(f"Error occurred while adding keywords: {e}")
+        except Exception as e:
+            print(f"Unexpected error: {e}") 
 
 
 u = Update()
 print("TestCaseID TestCase_ExternalID TestCaseName\n")
 u.func()
 u.update_tc()
+u.add_keywords_to_updated_tc()
+

@@ -18,7 +18,7 @@ TestCaseID TestCase_ExternalID TestCaseName
 9237 pcie-2 Random Read Operation
 9242 pcie-3 Previous Versions
 9246 pcie-4 PCIe Device Enumeration
-Enter the test case ID you want to update: pcie-1
+Enter the full external ID of TC you want to update: pcie-1
 Test case pcie-1 updated successfully!
 API Response: {'status_ok': True, 'msg': 'ok', 'operation': 'updateTestCase'}
 ```

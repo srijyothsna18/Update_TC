@@ -27,7 +27,7 @@ class Update:
                 print(tc_id, tc_full_ext_id, tc_name)
 
     def update_tc(self):
-        testcase_id = input("Enter the test case ID you want to update: ").strip()
+        testcase_id = input("Enter the full external ID of TC you want to update:").strip()
 
         try:
             response = self.tlc.updateTestCase(
